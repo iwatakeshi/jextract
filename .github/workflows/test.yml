@@ -1,11 +1,12 @@
 name: Build and test Jextract
 
 on:
-  push:
-    branches-ignore:
-      - master
-      - pr/*
-  workflow_dispatch:
+  # TODO: re-enable this
+  # push:
+  #   branches-ignore:
+  #     - master
+  #     - pr/*
+  # workflow_dispatch:
 
 env:
   CLANG_LLVM_BASE_URL: "https://github.com/llvm/llvm-project/releases/download/llvmorg-13.0.0/clang+llvm-13.0.0-x86_64"
