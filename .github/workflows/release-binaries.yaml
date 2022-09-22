@@ -95,14 +95,15 @@ jobs:
       - name: Prepare files to release
         run: |
           ls -al
-          mv ./jextract-macos-11 jextract-macos
-          mv ./jextract-ubuntu-20.04 jextract-linux
+          zip -r jextract-macos.zip ./jextract-macos-11
+          zip -r jextract-linux.zip ./jextract-ubuntu-20.04
+          ls -al
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           # TODO: automate this better an input from workflow-dispatch?
-          tag_name: 0.0.1-SNAPSHOT
+          tag_name: 0.0.2-SNAPSHOT
           # tag_name: ${{ github.event.inputs.release-version}}
           files: |
-            jextract-macos
-            jextract-linux
+            jextract-macos.zip
+            jextract-linux.zip
