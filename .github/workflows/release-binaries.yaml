@@ -23,9 +23,9 @@ jobs:
           - os: ubuntu-20.04
             TARGET: linux-gnu-ubuntu-20.04
             JAVA19_HOME: /tmp/deps/jdk-19
-          - os: macos-11
-            TARGET: apple-darwin
-            JAVA19_HOME: /tmp/deps/jdk-19/jdk-19.jdk/Contents/Home
+          # - os: macos-11
+            # TARGET: apple-darwin
+            # JAVA19_HOME: /tmp/deps/jdk-19/jdk-19.jdk/Contents/Home
 
     steps:
     - name: 'Check out repository'
