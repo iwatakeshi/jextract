@@ -79,6 +79,7 @@ jobs:
     - name: 'Build Jextract'
       shell: sh
       run: |
+        sh ./gradlew wrapper --gradle-version=7.6-rc-1 --distribution-type=bin
         sh ./gradlew -Pjdk19_home=${{ matrix.JAVA19_HOME }} -Pllvm_home=/tmp/deps/clang_llvm clean assemble
 
     - name: Upload binary
