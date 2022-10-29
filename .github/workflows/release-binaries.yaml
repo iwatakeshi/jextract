@@ -18,7 +18,7 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        os: [macos-11, ubuntu-20.04]
+        os: [ubuntu-20.04]
         include:
           - os: ubuntu-20.04
             TARGET: linux-gnu-ubuntu-20.04
